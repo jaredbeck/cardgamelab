@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'rails', '4.2.4.rc1'
+gem 'rom', '0.9.0.rc1'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'jquery-rails'
+gem 'pry-nav'
