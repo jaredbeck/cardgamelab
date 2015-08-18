@@ -1,0 +1,12 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      = link_to root_path, class: "navbar-brand" do
+        = image_tag "cgl_logo_tiny.png"
+    ul.nav.navbar-nav
+      li
+        a Games
+      li{ class=(controller.is_a?(CardsController) ? 'active' : '') }
+        = link_to "Cards", cards_path
+      li
+        a People

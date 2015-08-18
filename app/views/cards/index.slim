@@ -1,4 +1,2 @@
-h1 Cards
-ul
-  - @cards.each do |card|
-    li= card[:name]
+- @cards.each do |card|
+  .cgl-card= card[:name]

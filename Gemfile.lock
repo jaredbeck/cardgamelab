@@ -38,10 +38,16 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
+    autoprefixer-rails (5.2.1.1)
+      execjs
+      json
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bootstrap-sass (3.3.5.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.3.0)
     builder (3.2.2)
     charlatan (0.1.0)
     coderay (1.1.0)
@@ -202,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   database_cleaner
   dotenv-rails
   jquery-rails

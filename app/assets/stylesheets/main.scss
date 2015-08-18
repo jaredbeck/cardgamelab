@@ -1,3 +1,8 @@
-* {
-  font-family: helvetica, verdana, arial, sans-serif;
-}
+$navbar-height: 60px;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-brand { padding: 8px 16px; }
+
+@import "components/**/*"
