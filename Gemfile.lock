@@ -130,7 +130,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
-    rom (0.9.0.rc1)
+    rom (0.9.1)
       equalizer (~> 0.0, >= 0.0.9)
       rom-mapper (~> 0.2, >= 0.2.0)
       rom-support (~> 0.1, >= 0.1.0)
@@ -139,22 +139,22 @@ GEM
       equalizer (~> 0.0, >= 0.0.10)
       rom-support (~> 0.1, >= 0.1.0)
       transproc (~> 0.3)
-    rom-model (0.1.0)
+    rom-model (0.1.1)
       activemodel (>= 3.0, < 5.0)
       charlatan (~> 0.1)
       i18n
       rom-support (~> 0.1)
       virtus (~> 1.0, >= 1.0.5)
-    rom-rails (0.5.0.rc1)
+    rom-rails (0.5.0)
       addressable (~> 2.3)
       charlatan (~> 0.1)
       railties (>= 3.0, < 5.0)
-      rom (~> 0.9.0.rc1)
-      rom-model (~> 0.1, >= 0.1.0)
+      rom (~> 0.9, >= 0.9.0)
+      rom-model (~> 0.1, >= 0.1.1)
       virtus (~> 1.0, >= 1.0.5)
-    rom-sql (0.6.0.rc1)
+    rom-sql (0.6.0)
       equalizer (~> 0.0, >= 0.0.9)
-      rom (~> 0.9.0.rc1)
+      rom (~> 0.9, >= 0.9.0)
       sequel (~> 4.18)
     rom-support (0.1.0)
       wisper (~> 1.6, >= 1.6.0)
@@ -241,9 +241,9 @@ DEPENDENCIES
   pry-nav
   rails (= 4.2.4.rc1)
   rails_12factor
-  rom (= 0.9.0.rc1)
-  rom-rails (= 0.5.0.rc1)
-  rom-sql (= 0.6.0.rc1)
+  rom
+  rom-rails
+  rom-sql
   rspec-rails
   rubocop
   sass-rails
