@@ -1,6 +1,6 @@
 ROM::SQL.migration do
   up do
-    create_table :users do |t|
+    create_table :users do
       primary_key :id
       column :email, :text, null: false
       column :family_name, :text, null: false
