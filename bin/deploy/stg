@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+
 git push -f stg master
 heroku maintenance:on
 heroku run rake db:migrate
