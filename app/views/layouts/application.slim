@@ -7,4 +7,10 @@ head
   = csrf_meta_tags
 body
   = render partial: "layouts/nav"
+  - unless flash.empty?
+    .container
+      - if flash[:alert].present?
+        .alert.alert-warning= flash[:alert]
+      - if flash[:notice].present?
+        .alert.alert-info= flash[:notice]
   .container-fluid= yield
