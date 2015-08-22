@@ -150,6 +150,13 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: uniq_users_email; Type: INDEX; Schema: public; Owner: jared; Tablespace: 
+--
+
+CREATE UNIQUE INDEX uniq_users_email ON users USING btree (lower(email));
+
+
+--
 -- Name: public; Type: ACL; Schema: -; Owner: jared
 --
 
