@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+dropdb cgl_dev
+createdb cgl_dev
+bin/rake db:migrate
+pg_dump --schema-only cgl_dev > db/structure.sql
