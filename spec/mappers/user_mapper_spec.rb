@@ -8,9 +8,7 @@ RSpec.describe UserMapper do
         email: 'alice@example.com',
         family_name: "Doe",
         given_name: "Alice",
-        password_digest: "asdfasdf",
-        created_at: Time.current,
-        updated_at: Time.current
+        password_digest: "asdfasdf"
       }
     ])
     users = rom.relation(:users).map_with(:user)
