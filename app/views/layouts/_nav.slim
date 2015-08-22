@@ -6,7 +6,7 @@ nav.navbar.navbar-default
     ul.nav.navbar-nav
       li
         a Games
-      li{ class=(controller.is_a?(CardsController) ? 'active' : '') }
+      li class=nav_activity_class("cards")
         = link_to "Cards", cards_path
-      li
-        a People
+      li class=nav_activity_class("users")
+        = link_to "People", users_path

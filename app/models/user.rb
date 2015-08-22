@@ -7,4 +7,8 @@ class User
   attr_accessor :given_name
   attr_accessor :id
   attr_accessor :updated_at
+
+  def name
+    format "%s %s", given_name, family_name
+  end
 end
