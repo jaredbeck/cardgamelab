@@ -21,3 +21,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'slim_lint'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
