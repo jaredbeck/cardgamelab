@@ -107,6 +107,13 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     - using DATABASE_URL works well when it comes time to deploy to heroku
   - Can't `use_transactional_fixtures`
     - no problem, use DatabaseCleaner
+1. No automatic record timestamps
+  - created_at, updated_at
+  - not hard to implement, but why should we have to?
+1. No official support from devise
+  - devise only has built-in support for AR and Mongoid
+1. Works fine with ActiveModel
+  - which means it should work fine in controllers and views
 1. Built on Sequel
   - What are differences to arel?
 1. Pipeline

@@ -15,6 +15,7 @@ gem 'rom'
 gem 'rom-rails'
 gem 'rom-sql'
 gem 'sass-rails'
+gem 'scrypt'
 gem 'slim-rails'
 gem 'uglifier'
 

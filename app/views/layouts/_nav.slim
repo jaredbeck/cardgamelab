@@ -10,3 +10,14 @@ nav.navbar.navbar-default
         = link_to "Cards", cards_path
       li class=nav_activity_class("users")
         = link_to "People", users_path
+    .navbar-right
+      - if current_user.present?
+        p.navbar-text= current_user.name
+      ul.nav.navbar-nav
+        li
+          - if current_user.present?
+            = link_to "Sign Out",
+              session_path(current_user.id),
+              method: "delete"
+          - else
+            = link_to "Sign In", new_session_path
