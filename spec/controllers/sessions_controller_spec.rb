@@ -48,9 +48,9 @@ RSpec.describe SessionsController, type: :controller do
 
   describe "#destroy" do
     context "existing user id" do
-      let(:id) { user[:id] }
+      let(:id) { user.id }
       let(:user) {
-        ROM.env.command(:users).create.call([
+        ROM.env.command(:users).as(:user).create.call([
           {
             email: 'alice@example.com',
             family_name: "Doe",
