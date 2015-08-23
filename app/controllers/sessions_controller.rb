@@ -12,11 +12,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    user = rom.relation(:users).by_id(session[:current_user_id]).
-      map_with(:user).first
+    message = sign_out_message(current_user)
     session[:current_user_id] = nil
-    redirect_to root_url,
-      notice: "Goodbye #{user.given_name}. See you next time."
+    redirect_to root_url, notice: message
   end
 
   def new
@@ -31,5 +29,13 @@ class SessionsController < ApplicationController
 
   def build_form
     SessionForm.new(params[:email], params[:password])
+  end
+
+  def sign_out_message(user)
+    message = "See you next time."
+    if user.present?
+      message = "Goodbye #{user.given_name}. " + message
+    end
+    message
   end
 end
