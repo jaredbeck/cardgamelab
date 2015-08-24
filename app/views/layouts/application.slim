@@ -13,4 +13,4 @@ body
         .alert.alert-warning= flash[:alert]
       - if flash[:notice].present?
         .alert.alert-info= flash[:notice]
-  .container-fluid= yield
+  = yield

@@ -4,9 +4,6 @@ module UserCommands
     register_as :create
     result :one
 
-    # define a validator to use
-    # validator UserValidator
-
     def execute(tuples)
       super(timestamp(tuples, Time.current))
     end

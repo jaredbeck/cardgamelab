@@ -1,0 +1,11 @@
+- unless @card_form.errors.empty?
+  .alert.alert-warning
+    ul
+      - @card_form.errors.each do |k, v|
+        li= format("%s %s", k.to_s.titleize, v)
+
+= form_for @card_form do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: "form-control"
+  = f.submit "Save", class: "btn btn-primary"
