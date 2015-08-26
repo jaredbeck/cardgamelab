@@ -10,10 +10,22 @@ rails new --skip-spring --skip-turbolinks \
 1. how many people have used
   - MVC?
   - AR?
-1. the datamapper pattern
-  1. comparison to activerecord
-    - http://rom-rb.org/introduction/activerecord/
-    - rom separates domain from persistence
+1. patterns
+  1. activerecord
+  1. datamapper
+    1. comparison to activerecord
+      - http://rom-rb.org/introduction/activerecord/
+      - rom separates domain from persistence
+1. design of rom
+  1. adapter
+  1. gateway
+  1. command
+    - "Commands are an object-oriented replacement for callbacks"
+      (Gamma et al., Design Patterns, 1995, p. 235)
+    - "I personally find callbacks to be an anti-pattern"
+      (Perham, M., Ruby Rogues ep. 221, 20:19)
+    - "Callbacks are the devil"
+      (Ehmke, C. A., Ruby Rogues ep. 221, 20:22)
 1. setting expectations
   1. organization is verbose
     - the address to your house is longer than the address to
