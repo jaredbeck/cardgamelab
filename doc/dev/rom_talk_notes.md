@@ -12,6 +12,8 @@ rails new --skip-spring --skip-turbolinks \
   - AR?
 1. patterns
   1. activerecord
+    - An object that wraps a row in a database table or view, encapsulates the
+    database access, and adds domain logic on that data.
   1. datamapper
     1. comparison to activerecord
       - http://rom-rb.org/introduction/activerecord/
@@ -143,3 +145,12 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     - Example: composing with a mapper
       - Can chain either `as` or `map_with` on a relation
       - Can only chain `as` on a command, `map_with` raises `NoMethodError`
+1. It was hard
+  1. rom doesn't use models the way we're used to
+  1. how to deal with getting stuck
+    1. read the lib code
+    1. reach out to lib author
+    1. stackoverflow
+    1. stay positive, take a break (I don't)
+1. Things I haven't tried yet
+  1. associations
