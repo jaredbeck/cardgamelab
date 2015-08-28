@@ -1,5 +1,5 @@
 .container-fluid
-  h1 All Cards
+  h1= @user.name
 
   - @cards.each do |card|
-    .cgl-card= card[:name]
+    .cgl-card= card.name

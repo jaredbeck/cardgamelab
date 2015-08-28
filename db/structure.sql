@@ -35,7 +35,8 @@ SET default_with_oids = false;
 
 CREATE TABLE cards (
     id integer NOT NULL,
-    name text NOT NULL
+    name text NOT NULL,
+    user_id integer NOT NULL
 );
 
 
@@ -154,6 +155,14 @@ ALTER TABLE ONLY users
 --
 
 CREATE UNIQUE INDEX uniq_users_email ON users USING btree (lower(email));
+
+
+--
+-- Name: cards_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: jared
+--
+
+ALTER TABLE ONLY cards
+    ADD CONSTRAINT cards_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --

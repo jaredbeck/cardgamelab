@@ -1,13 +1,12 @@
 class CardsRelation < ROM::Relation[:sql]
-  # gateway :default
-
   dataset :cards
-
   register_as :cards
 
-  # define your methods here ie:
-  #
   def all
     select(:id, :name).order(:name)
+  end
+
+  def by_user(user)
+    all.where(user_id: user.id)
   end
 end

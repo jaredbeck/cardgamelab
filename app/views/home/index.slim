@@ -1,4 +1,5 @@
-p
-  - if current_user.present?
-    span> Hi, #{current_user.given_name}!
-  | Welcome to Card Game Lab
+.container-fluid
+  p
+    - if current_user.present?
+      span> Hi, #{current_user.given_name}!
+    | Welcome to Card Game Lab

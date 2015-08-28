@@ -145,6 +145,9 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     - Example: composing with a mapper
       - Can chain either `as` or `map_with` on a relation
       - Can only chain `as` on a command, `map_with` raises `NoMethodError`
+  1. globally-accessible ROM
+    - not worse than AR, also global
+    - a way to inject dependency?
 1. It was hard
   1. rom doesn't use models the way we're used to
   1. how to deal with getting stuck

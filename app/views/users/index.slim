@@ -1,3 +1,6 @@
-ul
-  - @users.each do |user|
-    li= user.name
+.container-fluid
+  h1 People
+
+  ul
+    - @users.each do |user|
+      li= link_to user.name, user_path(id: user.id)
