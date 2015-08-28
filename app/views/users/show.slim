@@ -1,5 +1,5 @@
 .container-fluid
-  h1= @user.name
+  h1= format("%s %s", @user.given_name, @user.family_name)
 
-  - @cards.each do |card|
+  - @user.cards.each do |card|
     .cgl-card= card.name

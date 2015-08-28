@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = rom.relation(:users).by_id(params.fetch(:id)).map_with(:user).first
-    @cards = rom.relation(:cards).by_user(@user).map_with(:card)
+    @user = UserRepository.new(rom).with_cards(params.fetch(:id))
   end
 end

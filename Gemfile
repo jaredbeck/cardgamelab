@@ -13,7 +13,12 @@ gem 'rails'
 gem 'rspec-rails'
 gem 'rom'
 gem 'rom-rails'
+
+# Known issue: `rom-sql` must be `require`d before `rom-repository` :(
+# https://github.com/rom-rb/rom-repository/issues/2
 gem 'rom-sql'
+gem 'rom-repository'
+
 gem 'sass-rails'
 gem 'scrypt'
 gem 'slim-rails'
