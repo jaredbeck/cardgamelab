@@ -165,5 +165,32 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     1. reach out to lib author
     1. stackoverflow
     1. stay positive, take a break (I don't)
+  1. The rails tutorial uses rom 0.6 so I didn't look at it much.
+    Also, I'd prefer to have a tutorial that walks through building a
+    simple CRUD app, explaining each step, rather than just installing
+    a sample app.
+  1. The Setup Guide does not explain where any of the setup code
+    *goes* in a rails app.  I understand that ROM is not focused
+    on rails, but I'd suggest that the guides specifically try to
+    help rails users,  instead of putting all the rails help in
+    one tutorial.
+  1. There is no `config/database.yml`, which is fine, but it's
+    not clear how to have different DATABASE_URL for development/test.
+    I ended up hacking dotenv to accomplish this.
+  1. Familiar tools are missing:
+    - rake: db:drop, db:rollback, db:structure:dump
+    - rails: migration generator
+  1. Test suite needs to use DatabaseCleaner because
+    `use_transactional_fixtures` is not available. I think I had
+    to figure that one out myself.
+  1. In the documentation I found examples that raise errors.
+  1. Examples in the guides only get you half-way. For example,
+    the repository guide (which, I know, is brand new) shows
+    how to write repository methods, but not how to use the
+    objects they return.
+  1. More links between guides, and from guides to API docs would
+    be helpful.
+  1. I still don't understand how to get actual models out of a
+    repository.  I can only get `ROM::Struct`s out.
 1. Things I haven't tried yet
   1. associations
