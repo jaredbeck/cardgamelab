@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def create
-    @card_form = Cards::CreateForm.build(params[:card])
+    @card_form = Cards::CreateForm.build(card_params)
     @card_form.save
     if @card_form.success?
       redirect_to cards_path, notice: "Card created"
@@ -16,5 +16,11 @@ class CardsController < ApplicationController
 
   def new
     @card_form = Cards::CreateForm.new
+  end
+
+  private
+
+  def card_params
+    params.require(:card).permit(:name).merge(user_id: current_user.id)
   end
 end

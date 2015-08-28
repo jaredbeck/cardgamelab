@@ -139,6 +139,7 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     1. setup in rails is not well documented
       - where does ROM.setup go?
       - you have to add initializers/rom.rb but no one tells you that
+    1. "docs are the biggest priority for 1.0.0" -Piotr
   1. Error messages are not helpful
 
   ```
