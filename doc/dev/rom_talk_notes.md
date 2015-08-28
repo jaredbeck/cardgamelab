@@ -28,6 +28,13 @@ rails new --skip-spring --skip-turbolinks \
       (Perham, M., Ruby Rogues ep. 221, 20:19)
     - "Callbacks are the devil"
       (Ehmke, C. A., Ruby Rogues ep. 221, 20:22)
+  1. relation
+    1. auto-curry
+    1. pipeline
+    1. graph
+      - `ROM::Relation::Graph`
+      - Load a relation with its associations
+      - http://www.rubydoc.info/gems/rom/ROM/Relation/Graph
 1. setting expectations
   1. organization is verbose
     - the address to your house is longer than the address to
@@ -149,6 +156,8 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
     - not worse than AR, also global
     - a way to inject dependency?
 1. It was hard
+  1. learning alone.
+    - some of the time i was learning AR was with other people
   1. rom doesn't use models the way we're used to
   1. how to deal with getting stuck
     1. read the lib code
