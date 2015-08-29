@@ -3,6 +3,6 @@
 set -e
 
 git push -f stg master
-heroku maintenance:on
-heroku run rake db:migrate
-heroku maintenance:off
+heroku maintenance:on -a cgl-stg
+heroku run rake db:migrate -a cgl-stg
+heroku maintenance:off -a cgl-stg

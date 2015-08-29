@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+git push -f prd master
+heroku maintenance:on -a cgl-prd
+heroku run rake db:migrate -a cgl-prd
+heroku maintenance:off -a cgl-prd
