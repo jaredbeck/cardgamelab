@@ -1,8 +1,8 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 
-if Rails.env.production?
-  abort "Abort tests: in production environment"
+if !Rails.env.test? || ENV.fetch("DATABASE_URL") !~ /cgl_test$/
+  abort "Abort tests: invalid test environment"
 end
 
 require 'spec_helper'

@@ -1,8 +1,12 @@
+$brand-primary: #337AB7;
+$navbar-default-color: black;
+$navbar-default-link-active-bg: lighten($brand-primary, 40%);
+$navbar-default-link-active-color: black;
+$navbar-default-link-color: black;
+$navbar-default-link-hover-bg: lighten($brand-primary, 30%);
+$navbar-default-link-hover-color: black;
 $navbar-height: 60px;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-.navbar-brand { padding: 8px 16px; }
-
 @import "components/**/*"
