@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def current_user
-    @_current_user ||= load_current_user
+    cgl_session.current_user
   end
   helper_method :current_user
 
@@ -14,8 +14,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def load_current_user
-    scu_id = session[:current_user_id]
-    scu_id && rom.relation(:users).by_id(scu_id).map_with(:user).first
+  def cgl_session
+    @_cgl_session = CGLSession.new(session, rom.relation(:users))
   end
 end
