@@ -156,6 +156,8 @@ rom.command(:cards).create.call([{ name: 'Annoy-o-Tron' }])
   1. globally-accessible ROM
     - not worse than AR, also global
     - a way to inject dependency?
+  1. many beautiful, simple objects under the hood
+    - like `ROM::Commands::Result`
 1. It was hard
   1. learning alone.
     - some of the time i was learning AR was with other people

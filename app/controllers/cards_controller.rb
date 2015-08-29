@@ -3,7 +3,8 @@ class CardsController < ApplicationController
     @card_form = Cards::CreateForm.build(card_params)
     @card_form.save
     if @card_form.success?
-      redirect_to cards_path, notice: "Card created"
+      card = @card_form.result.value
+      redirect_to user_path(card[:user_id]), notice: "Card created"
     else
       flash[:alert] = "Invalid card"
       render :new

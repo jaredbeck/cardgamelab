@@ -1,5 +1,11 @@
-.container-fluid
+.container
   h1= format("%s %s", @user.given_name, @user.family_name)
+  p Signed up #{@user.created_at.to_date.to_s(:long)}
 
+  - unless @user.cards.empty?
+    h2 Cards
   - @user.cards.each do |card|
-    .cgl-card= card.name
+    .cgl-card
+      span.cgl-card-name= card.name
+  .cgl-card-actions
+    = link_to "New Card", new_card_path, class: "btn btn-primary"
