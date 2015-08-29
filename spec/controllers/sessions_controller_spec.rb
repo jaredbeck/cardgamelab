@@ -50,14 +50,12 @@ RSpec.describe SessionsController, type: :controller do
     context "existing user id" do
       let(:id) { user.id }
       let(:user) {
-        ROM.env.command(:users).as(:user).create.call([
-          {
-            email: 'alice@example.com',
-            family_name: "Doe",
-            given_name: "Alice",
-            password_digest: "asdfasdf"
-          }
-        ])
+        ROM.env.command(:users).as(:user).create.call(
+          email: 'alice@example.com',
+          family_name: "Doe",
+          given_name: "Alice",
+          password_digest: "asdfasdf"
+        )
       }
 
       it "sets user id in session to nil" do

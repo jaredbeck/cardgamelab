@@ -13,7 +13,13 @@ module Cards
       validates :user_id, presence: true
     end
 
+    # TODO: The manual validation here feels like a hack.
+    # Is there a better way?
     def commit!
+      validate!
+      unless @errors.empty?
+        return ROM::Commands::Result::Failure.new("Invalid")
+      end
       cards.try { cards.create.call(attributes) }
     end
   end

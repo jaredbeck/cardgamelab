@@ -3,14 +3,12 @@ require "rails_helper"
 RSpec.describe CardsRelation do
   let(:rom) { ROM.env }
   let(:user) {
-    rom.command(:users).create.call([
-      {
-        email: 'alice@example.com',
-        family_name: "Doe",
-        given_name: "Alice",
-        password_digest: "asdfasdf"
-      }
-    ])
+    rom.command(:users).create.call(
+      email: 'alice@example.com',
+      family_name: "Doe",
+      given_name: "Alice",
+      password_digest: "asdfasdf"
+    )
   }
 
   describe "#all" do

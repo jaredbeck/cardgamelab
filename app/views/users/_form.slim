@@ -1,0 +1,24 @@
+- unless @form.errors.empty?
+  .alert.alert-warning
+    ul
+      - @form.errors.each do |k, v|
+        li= format("%s %s", k.to_s.titleize, v)
+
+= form_for @form do |f|
+  .form-group
+    .row
+      .col-xs-6
+        label First Name
+        = f.text_field :given_name, class: "form-control"
+        span.small Given Name
+      .col-xs-6
+        label Last Name
+        = f.text_field :family_name, class: "form-control"
+        span.small Family Name
+  .form-group
+    = f.label :email
+    = f.text_field :email, class: "form-control"
+  .form-group
+    = f.label :password
+    = f.password_field :password, class: "form-control"
+  = f.submit "Let's make a game!", class: "btn btn-primary"

@@ -4,14 +4,12 @@ RSpec.describe UserRepository do
   let(:rom) { ROM.env }
   let(:repo) { described_class.new(rom) }
   let(:user) {
-    rom.command(:users).create.call([
-      {
-        email: 'alice@example.com',
-        family_name: "Doe",
-        given_name: "Alice",
-        password_digest: "asdfasdf"
-      }
-    ])
+    rom.command(:users).create.call(
+      email: 'alice@example.com',
+      family_name: "Doe",
+      given_name: "Alice",
+      password_digest: "asdfasdf"
+    )
   }
   let(:user_id) { user[:id] }
 

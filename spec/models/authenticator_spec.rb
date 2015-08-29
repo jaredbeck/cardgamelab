@@ -8,14 +8,13 @@ RSpec.describe Authenticator do
     let(:password) { "asdfasdf" }
 
     before do
-      rom.command(:users).create.call([
-        {
-          email: email,
-          family_name: "Doe",
-          given_name: "Alice",
-          password_digest: SCrypt::Password.create(password)
-        }
-      ])
+      user = rom.command(:users).create.call(
+        email: email,
+        family_name: "Doe",
+        given_name: "Alice",
+        password: password
+      )
+      expect(user[:id]).to be_present
     end
 
     context "correct credentials" do

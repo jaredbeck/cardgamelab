@@ -1,5 +1,7 @@
-.container-fluid
-  p
-    - if current_user.present?
-      span> Hi, #{current_user.given_name}!
-    | Welcome to Card Game Lab
+.container
+  h1 Card Game Lab
+  p.lead
+    ' Design and play your own card game online, and
+    ' share it with friends!
+  - if current_user.nil?
+    = link_to "Sign Up", new_user_path, class: "btn btn-primary btn-lg"

@@ -3,14 +3,12 @@ require "rails_helper"
 RSpec.describe UserMapper do
   it "maps UsersRelation to User" do
     rom = ROM.env
-    rom.command(:users).create.call([
-      {
-        email: 'alice@example.com',
-        family_name: "Doe",
-        given_name: "Alice",
-        password_digest: "asdfasdf"
-      }
-    ])
+    rom.command(:users).create.call(
+      email: 'alice@example.com',
+      family_name: "Doe",
+      given_name: "Alice",
+      password_digest: "asdfasdf"
+    )
     users = rom.relation(:users).map_with(:user)
     expect(users.count).to eq(1)
     expect(users.first).to be_a(User)
