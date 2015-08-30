@@ -1,6 +1,6 @@
 module Cards
   class CreateForm < ROM::Model::Form
-    commands cards: :create
+    inject_commands_for :cards
 
     input do
       set_model_name 'Card'
